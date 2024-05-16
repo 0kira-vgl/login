@@ -59,7 +59,7 @@ export default function Form() {
               Senha
             </label>
 
-            <div className="flex flex-1 text-sm border-white/10 rounded-lg p-2 w-full gap-2 border focus:outlines outline-1">
+            <div className="flex flex-1 text-sm border-white/10 rounded-lg p-2 w-full gap-2 border focus-within:outline focus-within:outline-1">
               <input
                 id="password"
                 name="password"
@@ -90,7 +90,7 @@ export default function Form() {
           </a>
         </CardContent>
         <CardFooter>
-          <Button type="submit" className="w-full" variant={"secondary"}>
+          <Button type="submit" variant={"secondary"} className="w-full">
             Entrar
           </Button>
         </CardFooter>
