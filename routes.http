@@ -1,0 +1,51 @@
+@baseUrl = https://api-authentication-0n5a.onrender.com
+@token = {{signin.response.body.accessToken}}
+
+###
+
+# @name signin
+POST {{baseUrl}}/sign-in
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "rafael.tiburcio@teste.com",
+    "password": "123456"
+}
+
+###
+
+# @name create-user
+POST {{baseUrl}}/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Rafael Tiburcio",
+    "email": "rafael.tiburcio@teste.com",
+    "password": "123456",
+    "role": "admin"
+}
+
+
+###
+
+# @name me
+GET {{baseUrl}}/me
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+###
+
+# @name update-user
+PUT {{baseUrl}}/users
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Rafael Tiburcio",
+    "email": "rafael@teste.com",
+    "password": "123456",
+    "role": "admin"
+}
